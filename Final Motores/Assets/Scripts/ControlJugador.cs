@@ -41,22 +41,6 @@ public class ControlJugador : MonoBehaviour
             Destroy(pro, 5);
 
             RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit) == hit.distance < 5)
-            {
-                Debug.Log("El rayo tocó al objeto: " + hit.collider.name);
-
-                if (hit.collider.name.Substring(0, 3) == "Bot")
-                {
-                    GameObject objetoTocado = GameObject.Find(hit.transform.name);
-                    ControlBot scriptObjetoTocado = (ControlBot)objetoTocado.GetComponent(typeof(ControlBot));
-
-                    if (scriptObjetoTocado != null)
-                    {
-                        scriptObjetoTocado.recibirDaño();
-                    }
-                }
-            }
         }
     }
 
@@ -64,9 +48,7 @@ public class ControlJugador : MonoBehaviour
     {
         if (other.gameObject.tag == "Pared")
         {
-            Destroy(gameObject);
             SceneManager.LoadScene(3);
-
         }
     }
 }
