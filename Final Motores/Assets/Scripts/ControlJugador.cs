@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControlJugador : MonoBehaviour
 {
@@ -56,6 +57,16 @@ public class ControlJugador : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Pared")
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(3);
+
         }
     }
 }

@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototipo.unity
     guid: b5d19aaba4052874480e4196803f28af
+  - enabled: 1
+    path: Assets/Scenes/Felicitaciones.unity
+    guid: 0ed6a3151d6d733439d385ce10b6b900
+  - enabled: 1
+    path: Assets/Scenes/Reiniciar.unity
+    guid: 81123c65c94717341bf9022b2959c8d4
   m_configObjects: {}
