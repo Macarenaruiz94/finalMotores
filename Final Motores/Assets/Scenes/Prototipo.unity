@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: c39737205ebcadd4798d78353ae140e4, type: 2}
 --- !u!1 &93865985
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,9 +584,10 @@ GameObject:
   - component: {fileID: 437961270}
   - component: {fileID: 437961269}
   - component: {fileID: 437961268}
+  - component: {fileID: 437961275}
   m_Layer: 0
-  m_Name: JugadorAmigo
-  m_TagString: Untagged
+  m_Name: Enemigo
+  m_TagString: Pared
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -615,10 +616,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!195 &437961270
 NavMeshAgent:
@@ -630,7 +631,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.50000006
-  m_Speed: 3.5
+  m_Speed: 1.56
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -713,12 +714,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437961267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3137093, y: 1.76, z: -31.36}
+  m_LocalPosition: {x: 9.12, y: 1.37, z: 3.15}
   m_LocalScale: {x: 0.63, y: 0.55, z: 0.72}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &437961275
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437961267}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.50000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +909,7 @@ GameObject:
   - component: {fileID: 891982273}
   - component: {fileID: 891982272}
   - component: {fileID: 891982274}
+  - component: {fileID: 891982275}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Player
@@ -1024,6 +1040,28 @@ MonoBehaviour:
   camaraPrimeraPersona: {fileID: 963194227}
   rapidezDesplazamiento: 10
   proyectil: {fileID: 3536695725290836076, guid: 4a5381ac9f37bed40ba0d0a98f9d3a96, type: 3}
+--- !u!195 &891982275
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891982267}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &901046712
 GameObject:
   m_ObjectHideFlags: 0
